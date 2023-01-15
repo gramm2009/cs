@@ -25,6 +25,7 @@ namespace ConsoleApp
             Edges.Add(edge);
         }
 
+        // Матрица
         public int[,] GetMatrix()
         {
             //строим двумерный массив (графы идут зеркально слева на право,  с верху в низ
@@ -41,5 +42,22 @@ namespace ConsoleApp
 
             return matrix;
         }
+
+        // Список смежных вершин (передаем вершину и получаем список вершин с которыми она связана)
+        public List<Vertex> GetVertexList(Vertex vertex)
+        {
+            List<Vertex> result = new List<Vertex>();
+
+            foreach (Edge edge in Edges)
+            {
+                if (edge.From == vertex)
+                {
+                    result.Add(edge.To);
+                }
+            }
+
+            return result;
+        }
+
     }
 }

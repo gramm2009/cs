@@ -31,6 +31,26 @@
             graph.AddEdge(v6, v5);
             graph.AddEdge(v5, v6);
 
+            // 1) Получаем матрицу
+            GetMatrix(graph);
+
+            // 2) Получаем все смежные вершины из заданной вершины
+            GetVertex(v1, graph);
+            GetVertex(v2, graph);
+            GetVertex(v3, graph);
+            GetVertex(v4, graph);
+            GetVertex(v5, graph);
+            GetVertex(v6, graph);
+            GetVertex(v7, graph);
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+
+        }
+
+        private static void GetMatrix(Graph graph)
+        {
             int[,] matrix = graph.GetMatrix();
 
             for (int i = 0; i < graph.VertexCoutn; i++)
@@ -41,6 +61,17 @@
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine(); 
+        }
+
+        private static void GetVertex(Vertex vertex, Graph graph)
+        {
+            Console.Write(vertex.Number + ": ");
+            foreach (Vertex v in graph.GetVertexList(vertex))    
+            {
+                Console.Write(v.Number + ", ");
+            }
+            Console.WriteLine();
         }
     }
 }

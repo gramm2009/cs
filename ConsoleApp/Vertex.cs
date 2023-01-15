@@ -8,8 +8,8 @@ namespace ConsoleApp
 {
     internal class Vertex
     {
-        public int Number { get; set; }
-        public bool Oriented { get; set; }
+        public int Number { get; set; } // номер вешришы
+        public bool Oriented { get; set; } // ориентированный или нет
 
 
         public Vertex(int number)

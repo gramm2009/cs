@@ -8,9 +8,9 @@ namespace ConsoleApp
 {
     internal class Edge
     {
-        public Vertex From { get; set; }
-        public Vertex To { get; set; }
-        public int Weight { get; set; }
+        public Vertex From { get; set; } //от вершины
+        public Vertex To { get; set; } // до вершины
+        public int Weight { get; set; } // вес ребра если нет по по дефолту 1
 
         public Edge(Vertex from, Vertex to, int weight = 1)
         {
