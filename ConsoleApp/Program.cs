@@ -40,8 +40,6 @@
                     Console.Write(matrix[i, k] + " ");
                 }
                 Console.WriteLine();
-
-
             }
         }
     }
