@@ -10,7 +10,7 @@ namespace ConsoleApp
     {
         public int Number { get; set; } // номер вешришы
         public bool Oriented { get; set; } // ориентированный или нет
-
+        public bool Visited { get; set; } = false; // посещали или нет
 
         public Vertex(int number)
         {

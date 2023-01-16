@@ -46,6 +46,9 @@
             Console.WriteLine();
             Console.WriteLine();
 
+            // 3) Узнаем есть ли маршрут из одной вершины к другой (в ширину)
+            Console.WriteLine(Wave(v1, v6, graph));
+
 
         }
 
@@ -61,17 +64,50 @@
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine(); 
+            Console.WriteLine();
         }
 
         private static void GetVertex(Vertex vertex, Graph graph)
         {
             Console.Write(vertex.Number + ": ");
-            foreach (Vertex v in graph.GetVertexList(vertex))    
+            foreach (Vertex v in graph.GetVertexList(vertex))
             {
                 Console.Write(v.Number + ", ");
             }
             Console.WriteLine();
+        }
+
+        public static bool Wave(Vertex start, Vertex finish, Graph graph)
+        {
+            List<Vertex> list = new List<Vertex>() { start };
+
+
+
+            while (list.Count > 0)
+            {
+                List<Vertex> sm = graph.GetVertexList(list[0]);
+
+                if (sm.Count > 0)
+                {
+                    foreach (Vertex v in sm)
+                    {
+                        if (v == finish)
+                        {
+                            return true;
+                        }
+
+                        if (!v.Visited)
+                        {
+                            v.Visited = true;
+                            list.Add(v);
+                        }
+
+                    }
+                }
+                list.RemoveAt(0);
+            }
+
+            return false;
         }
     }
 }
