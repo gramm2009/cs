@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PA6J3rkfnX2uklxzXwnoWvKcGZ5PhTyFds2mwViKCmcyZVxMF5vwKRwyv70n/KLn2zxrShifUegn2E6My6gW7Q==",
+  "dgSpecHash": "Lju4bOyrFEKdeqA+Vgj1PB7GGA2sEZ749y+/0v58Ia0jxPV7UlHevaQXBXSyc4i1/9zb1lBaCcCiqTZra1RXFg==",
   "success": true,
-  "projectFilePath": "C:\\viktor\\c#\\projects\\ConsoleApp\\ConsoleApp\\ConsoleApp.csproj",
+  "projectFilePath": "C:\\viktor\\repo\\cs\\ConsoleApp\\ConsoleApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
